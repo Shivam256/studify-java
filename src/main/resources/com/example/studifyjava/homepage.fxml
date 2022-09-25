@@ -111,14 +111,14 @@
         </Button>
         <Button layoutX="38.0" layoutY="406.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="201.0"
                 style="-fx-background-color: D90A2C; -fx-text-fill: #fff; -fx-cursor: hand; -fx-background-radius: 10px;"
-                text="VIEW COURSES">
+                text="VIEW COURSES" onAction="#handleViewCoursesClick" >
             <font>
                 <Font name="System Bold" size="13.0"/>
             </font>
         </Button>
         <Button layoutX="275.0" layoutY="406.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="201.0"
                 style="-fx-background-color: #2B2D42; -fx-text-fill: #fff; -fx-cursor: hand; -fx-background-radius: 10px;"
-                text="VIEW STUDENTS">
+                text="VIEW STUDENTS" onAction="#handleViewStudentsClick" >
             <font>
                 <Font name="System Bold" size="13.0"/>
             </font>

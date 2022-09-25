@@ -25,4 +25,15 @@ public class HelloController {
         SceneController.launchScene("add-student.fxml");
     }
 
+
+    @FXML
+    public void handleViewCoursesClick() throws IOException{
+        SceneController.launchScene("all-courses.fxml");
+    }
+
+    @FXML
+    public void handleViewStudentsClick() throws IOException{
+        SceneController.launchScene("all-students.fxml");
+    }
+
 }
