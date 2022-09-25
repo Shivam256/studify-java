@@ -5,4 +5,6 @@ module com.example.studifyjava {
 
     opens com.example.studifyjava to javafx.fxml;
     exports com.example.studifyjava;
+    exports com.example.studifyjava.controllers;
+    opens com.example.studifyjava.controllers to javafx.fxml;
 }

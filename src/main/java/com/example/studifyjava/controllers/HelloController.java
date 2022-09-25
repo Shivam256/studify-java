@@ -1,4 +1,4 @@
-package com.example.studifyjava;
+package com.example.studifyjava.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
