@@ -1,0 +1,27 @@
+syntax ="proto3";
+
+option java_package = "com.rew.grpc";
+
+service JoinSyndicate{
+    rpc joinsyn(Member) returns (Position);
+    rpc sendfile(stream FileData) returns (FileRes);
+}
+message Member{
+    string name = 1;
+}
+
+message Position{
+    string position = 1;
+    string msg = 2;
+}
+
+message FileData{
+bytes data =1;
+int32 size=2;
+}
+message FileRes{
+string ack =1;
+}
+
+message Empty{}
+
