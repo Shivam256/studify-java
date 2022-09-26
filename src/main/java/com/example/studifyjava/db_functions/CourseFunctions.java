@@ -16,6 +16,7 @@ public class CourseFunctions {
     }
 
     public static ArrayList<Course> getAllCourses(){
+        CourseTree.courses = new ArrayList<>();
         CourseTree.getCourses((Course)CourseTree.root);
         ArrayList<Course> courses = CourseTree.courses;
         return courses;
