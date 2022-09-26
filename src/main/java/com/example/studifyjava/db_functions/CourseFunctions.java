@@ -17,6 +17,10 @@ public class CourseFunctions {
         CourseTree.printCourseTree((Course)CourseTree.root);
     }
 
+    public static void getLatestId(){
+
+    }
+
     public static void getNumCourses(){
 
     }

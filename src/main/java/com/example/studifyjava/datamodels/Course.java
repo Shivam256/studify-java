@@ -8,6 +8,7 @@ public class Course extends Node {
 
     public Course(String name,String desc) {
         super(courseId);
+        System.out.println(courseId + " jhere i am");
         courseId++;
         this.courseName=name;
         this.courseDescription=desc;

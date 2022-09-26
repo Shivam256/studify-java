@@ -3,13 +3,11 @@ package com.example.studifyjava.db;
 import com.example.studifyjava.datamodels.Course;
 import com.example.studifyjava.datamodels.Node;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 public class AVLTree {
     public Node root;
+    public int maxId = 0;
 
     public Node insert(Node root, Node node) {
         if (root == null) {
@@ -17,8 +15,11 @@ public class AVLTree {
             if (this.root == null) {
                 this.root = node;
             }
+            maxId = Integer.max(maxId,node.id);
+            this.root.maxId = maxId;
             return node;
         }
+
 
         if (node.id < root.id) {
             root.left = insert(root.left, node);
@@ -74,10 +75,10 @@ public class AVLTree {
         return node.height;
     }
 
-    private void serializeData(Node root) {
+    public void serializeData(Node root,String filename) {
         try {
             //Saving of object in a file
-            FileOutputStream file = new FileOutputStream("f.txt");
+            FileOutputStream file = new FileOutputStream(filename);
             ObjectOutputStream out = new ObjectOutputStream(file);
 
             // Method for serialization of object
@@ -94,15 +95,15 @@ public class AVLTree {
 
     }
 
-    private Node decerializeData() {
+    public Node decerializeData(String filename) {
         Node root = null;
         try {
             // Reading the object from a file
-            FileInputStream file = new FileInputStream("f.txt");
+            FileInputStream file = new FileInputStream(filename);
             ObjectInputStream in = new ObjectInputStream(file);
 
             // Method for deserialization of object
-            root = (Node) in.readObject();
+            root = (Node)in.readObject();
 
             in.close();
             file.close();
