@@ -4,10 +4,13 @@ import com.example.studifyjava.datamodels.Course;
 import com.example.studifyjava.datamodels.Node;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class AVLTree {
     public Node root;
     public int maxId = 0;
+
+    public ArrayList<Course> courses = new ArrayList<>();
 
     public Node insert(Node root, Node node) {
         if (root == null) {
@@ -125,6 +128,17 @@ public class AVLTree {
         printCourseTree((Course)root.left);
         printCourseTree((Course)root.right);
     }
+
+    public void getCourses(Course root){
+        if(root == null) return;
+        courses.add(root);
+        getCourses((Course)root.left);
+        getCourses((Course)root.right);
+    }
+
+
+
+
 
 
 }

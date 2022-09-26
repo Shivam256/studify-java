@@ -28,4 +28,7 @@ public class CourseController {
         CourseFunctions.getAllCourses();
         SceneController.launchScene("homepage.fxml");
     }
+
+
+
 }
