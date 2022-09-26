@@ -73,7 +73,7 @@ public class Main extends Application {
         if (f.exists()) {
             CourseFunctions.CourseTree.root = CourseFunctions.CourseTree.decerializeData("courses.txt");
             System.out.println(CourseFunctions.CourseTree.root.maxId + " yo");
-            Course.courseId = CourseFunctions.CourseTree.root.maxId + 1;
+            Course.courseId = CourseFunctions.CourseTree.root.maxId;
 
         }
 

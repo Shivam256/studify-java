@@ -13,6 +13,7 @@ public class CourseFunctions {
         System.out.println(name + " " + description);
         Course course = new Course(name,description);
         CourseTree.root = CourseTree.insert(CourseTree.root,course);
+        CourseTree.root.maxId = Course.courseId;
     }
 
     public static ArrayList<Course> getAllCourses(){

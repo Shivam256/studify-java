@@ -128,6 +128,15 @@ public class AVLTree {
         printCourseTree((Course)root.left);
         printCourseTree((Course)root.right);
     }
+    public void updateCourse(Course root,Course course){
+        if(root == null) return;
+        if(root.id == course.id){
+            root.setCourseName(course.getCourseName());
+            root.setCourseDescription(course.getCourseDescription());
+        }
+        updateCourse((Course)root.left,course);
+        updateCourse((Course)root.right,course);
+    }
 
     public void getCourses(Course root){
         if(root == null) return;
