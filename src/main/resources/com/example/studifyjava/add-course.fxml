@@ -15,9 +15,9 @@
             <Font name="System Bold" size="27.0" />
          </font>
       </Label>
-      <TextField layoutX="27.0" layoutY="139.0" prefHeight="36.0" prefWidth="410.0" promptText="Course Name" />
-      <TextArea layoutX="27.0" layoutY="200.0" prefHeight="156.0" prefWidth="410.0" promptText="Course Description" />
-      <Button layoutX="27.0" layoutY="391.0" mnemonicParsing="false" onAction="#addCourse" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: D90A2C; -fx-text-fill: #fff; -fx-cursor: hand; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="ADD COURSE">
+      <TextField layoutX="27.0" layoutY="139.0" prefHeight="36.0" prefWidth="410.0" promptText="Course Name" fx:id="courseName" />
+      <TextArea layoutX="27.0" layoutY="200.0" prefHeight="156.0" prefWidth="410.0" promptText="Course Description" fx:id="courseDescription" />
+      <Button layoutX="27.0" layoutY="391.0" mnemonicParsing="false" onAction="#handleAddCourse" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: D90A2C; -fx-text-fill: #fff; -fx-cursor: hand; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="ADD COURSE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

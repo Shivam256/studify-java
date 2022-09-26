@@ -1,5 +1,7 @@
 package com.example.studifyjava;
 
+import com.example.studifyjava.db.AVLTree;
+import com.example.studifyjava.db_functions.CourseFunctions;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -38,7 +40,7 @@ public class Main extends Application {
         try {
             root = FXMLLoader.load(getClass().getResource("homepage.fxml"));
             Main.primaryStage = primaryStage;
-            primaryStage.setTitle("JAVA FX REVISION");
+            primaryStage.setTitle("STUDIFY");
             Scene scene = new Scene(root, 880, 600);
             primaryStage.setScene(scene);
             primaryStage.show();
@@ -48,7 +50,14 @@ public class Main extends Application {
         }
     }
 
+    @Override
+    public void stop()
+    {
+        //serialize the trees
+    }
     public static void main(String[] args) {
+        //if course.txt presene deserialize and set to tree else
+        CourseFunctions.CourseTree = new AVLTree();
         launch();
     }
 }
